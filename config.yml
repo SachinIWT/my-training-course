@@ -1,0 +1,16 @@
+title: my-training
+description: Git Training and Notes
+template:
+  repo: my-training-template
+  name: my-training
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
